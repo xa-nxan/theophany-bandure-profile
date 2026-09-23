@@ -1,0 +1,288 @@
+/* =========================================================
+   Tokens
+   ========================================================= */
+:root {
+  --paper:      #FAFAF7;
+  --panel:      #EFF0E9;
+  --ink:        #1B2430;
+  --ink-soft:   #4B5563;
+  --rule:       #D8D9CE;
+  --accent:     #3E7C59;
+  --accent-ink: #EAF3ED;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --max-width: 860px;
+}
+
+/* =========================================================
+   Reset & base
+   ========================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.1rem, 4vw, 2.9rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 600; }
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
+  color: var(--ink-soft);
+}
+
+p { margin: 0 0 1em; max-width: 65ch; }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover { color: #2E5F44; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+ul { padding: 0; margin: 0; list-style: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* =========================================================
+   Layout shell
+   ========================================================= */
+main, .header-inner, .site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+section:last-of-type { border-bottom: none; }
+
+/* =========================================================
+   Header
+   ========================================================= */
+.site-header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2.75rem 0 2.25rem;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header-name h1 { color: var(--paper); margin-bottom: 0.2em; }
+
+.tagline {
+  margin: 0;
+  color: #C9CFCA;
+  font-size: 1.05rem;
+  max-width: none;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.site-nav a {
+  color: var(--paper);
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--paper);
+  border-bottom-color: var(--accent);
+}
+
+/* =========================================================
+   About section
+   ========================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-bio p:last-child { margin-bottom: 0; }
+
+.quick-facts {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  padding: 1.5rem 1.5rem 1.25rem;
+}
+
+.quick-facts h3 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.quick-facts dl { margin: 0; }
+
+.fact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.fact-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.fact-row dt {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.fact-row dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* =========================================================
+   Skills section
+   ========================================================= */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills-list li {
+  background: var(--accent-ink);
+  color: #234B34;
+  border: 1px solid #CFE3D6;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* =========================================================
+   Contact section
+   ========================================================= */
+.contact-intro { color: var(--ink-soft); }
+
+.contact-form {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.form-row input,
+.form-row textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.form-row input:invalid:not(:placeholder-shown),
+.form-row textarea:invalid:not(:placeholder-shown) {
+  border-color: #B4462F;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background: var(--accent);
+  color: var(--paper);
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover { background: #2E5F44; }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.site-footer {
+  padding: 2rem 1.5rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.site-footer p { margin: 0; max-width: none; }
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 640px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav ul {
+    gap: 1.1rem;
+    flex-wrap: wrap;
+  }
+
+  section { padding: 2.25rem 0; }
+}

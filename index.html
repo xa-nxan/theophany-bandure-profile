@@ -1,75 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profile and mini-portfolio for Theophany Bandure.">
-    <title>Theophany Bandure - Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theophany Bandure — Software Engineering Student</title>
+  <meta name="description" content="Profile and mini-portfolio page for Theophany Bandure, a Software Engineering student at Africa University, built with semantic HTML5.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-name">
         <h1>Theophany Bandure</h1>
-        <p>Aspiring Software Engineer & UI/UX Enthusiast</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <p class="tagline">Software Engineering Student</p>
+      </div>
+      <nav class="site-nav" aria-label="Page sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <article>
-                <h3>My Journey</h3>
-                <p>Hello! I am a passionate computing student at Africa University, deeply curious about the intersection of artificial intelligence and software engineering. My goal is to build accessible, user-centric web applications that solve real-world problems.</p>
-                <img src="profile-placeholder.jpg" alt="A professional headshot of Theophany Bandure smiling">
-            </article>
-        </section>
+  <main>
 
-        <section id="portfolio">
-            <h2>Mini Portfolio</h2>
-            <article>
-                <h3>Recent Projects</h3>
-                <ul>
-                    <li>Semantic HTML5 Profile Page</li>
-                    <li>Python AI Script</li>
-                </ul>
-            </article>
-        </section>
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <article class="about-bio">
+          <h2 id="about-heading">About</h2>
+          <p>
+            I'm a second-year Software Engineering student at Africa University, currently working
+            through the Web Technologies unit and getting comfortable with the idea that good
+            software starts with structure — clean markup, clear logic, and interfaces people don't
+            have to think twice about.
+          </p>
+          <p>
+            Right now I split my time between coursework, small personal projects, and figuring out
+            how AI tools fit into a real development workflow rather than replacing it. This page is
+            one of those experiments: hand-built HTML, styled by hand, with an AI-assisted first draft
+            of this bio that I rewrote until it actually sounded like me.
+          </p>
+        </article>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <div>
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" required minlength="2">
-                </div>
-                <div>
-                    <label for="emailAddress">Email Address:</label>
-                    <input type="email" id="emailAddress" name="emailAddress" required>
-                </div>
-                <div>
-                    <label for="phoneNumber">Phone Number:</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="Ten digit phone number">
-                </div>
-                <div>
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
-                </div>
-                <div>
-                    <button type="submit">Send Message</button>
-                </div>
-            </form>
-        </section>
-    </main>
+        <aside class="quick-facts" aria-labelledby="facts-heading">
+          <h3 id="facts-heading">Quick facts</h3>
+          <dl>
+            <div class="fact-row">
+              <dt>Programme</dt>
+              <dd>BSc Software Engineering</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Year</dt>
+              <dd>2, Semester 1</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Institution</dt>
+              <dd>Africa University</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Currently learning</dt>
+              <dd>Semantic HTML5, CSS3, AI-assisted UI design</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Theophany Bandure</p>
-    </footer>
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Git &amp; GitHub</li>
+        <li>Figma</li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact me</h2>
+      <p class="contact-intro">Have a question or want to work on something together? Send a message below.</p>
+
+      <form class="contact-form" action="#" method="post">
+
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="2"
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="you@example.com"
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9+\-\s()]{7,15}"
+            placeholder="e.g. +263 77 123 4567"
+            autocomplete="tel"
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            minlength="3"
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            minlength="10"
+          ></textarea>
+        </div>
+
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Theophany Bandure. Built for CIS2103 — Web Technologies, Africa University.</p>
+    <ul class="footer-links">
+      <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="mailto:theophany.bandure@example.com">Email</a></li>
+    </ul>
+  </footer>
 
 </body>
 </html>

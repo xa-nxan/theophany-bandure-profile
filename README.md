@@ -1,25 +1,33 @@
-# Theophany Bandure - Profile
+# Theophany Bandure — Profile / Mini-Portfolio
 
-A semantic HTML5 profile and mini-portfolio page for CIS2103 Web Technologies.
+A one-page semantic HTML5 profile and mini-portfolio site, built for
+Practical Assignment 1 (Web Technologies, CIS2103, Africa University).
 
-## PROMPT LOG
+## Files
 
-**1. Exact Prompt:**
-"Act as a professional copywriter. I am a 2nd year Software Engineering & CIS student at Africa University. I need a short, engaging bio for the 'About Me' section of my portfolio. My goal is to sound passionate about AI and web technologies while keeping it professional. Please format it as a single paragraph of 2-3 sentences."
+- `index.html` — the page markup
+- `style.css` — the stylesheet
+- `PROMPT_LOG.md` — the AI prompt, raw output, edited version, and reflection for the About-section copy (Part C)
 
-**2. AI's Raw Output:**
-"Hello there! I'm a dedicated second-year Software Engineering and CIS student at Africa University with a profound passion for Artificial Intelligence and web technologies. I am driven by the desire to craft innovative, user-centric digital solutions that bridge the gap between complex algorithms and intuitive design. Always eager to learn, I am on a mission to leverage cutting-edge technology to solve real-world challenges."
+## Accessibility: peer review issue & fix
 
-**3. Final Edited Version:**
-"Hello! I am a passionate computing student at Africa University, deeply curious about the intersection of artificial intelligence and software engineering. My goal is to build accessible, user-centric web applications that solve real-world problems."
+**Issue found by peer reviewer (Thursday's practical session):** [Replace
+this line with the actual issue your reviewer flagged — for example: "My
+contact form inputs only had placeholder text instead of real `<label>`
+elements, so a screen reader announced them as unlabelled."]
 
-**4. Reflection:**
-I changed the AI's output because the original felt a bit too verbose and used generic buzzwords ("profound passion", "bridge the gap"). I shortened it to make it sound more like my authentic voice, focusing clearly on my core interests and my practical goal of building accessible applications.
+**Fix applied:** [Replace this line with what you changed — for example:
+"Added a `<label for="...">` linked by `id` to every form input, and moved
+the example text into a `placeholder` attribute only, so the label is
+always announced."]
 
-## Accessibility Review & Fix
+## Notes
 
-**Issue Found During Thursday's Peer Review:** 
-The peer reviewer noticed that the profile picture in the `About Me` section lacked descriptive alternative text (`alt=""`). This meant screen readers would skip the image entirely, missing out on important context about the profile owner.
-
-**Fix Applied:**
-I updated the `<img>` tag to include a meaningful description: `alt="A professional headshot of Theophany Bandure smiling"`. This ensures the image serves its purpose for all users.
+- Contact form validation is handled entirely with native HTML5 attributes
+  (`required`, `type="email"`, `pattern`, `minlength`) — no JavaScript.
+- Fonts are loaded from Google Fonts (Fraunces for display, Source Sans 3
+  for body text); the page degrades to system serif/sans-serif fonts if the
+  fonts fail to load.
+- Built on top of the file started in the Unit II practical session, per
+  the assignment brief; will be extended with responsive Tailwind styling
+  in the Unit III assignment.
