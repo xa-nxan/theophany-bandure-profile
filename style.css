@@ -84,7 +84,7 @@ main, .header-inner, .site-footer {
 }
 
 section {
-  padding: 3rem 0;
+  padding: 2.25rem 0;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -118,7 +118,8 @@ section:last-of-type { border-bottom: none; }
 
 .site-nav ul {
   display: flex;
-  gap: 1.75rem;
+  flex-wrap: wrap;
+  gap: 1.1rem;
 }
 
 .site-nav a {
@@ -137,8 +138,8 @@ section:last-of-type { border-bottom: none; }
    ========================================================= */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   align-items: start;
 }
 
@@ -256,9 +257,9 @@ section:last-of-type { border-bottom: none; }
 .site-footer {
   padding: 2rem 1.5rem 2.5rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 1rem;
   color: var(--ink-soft);
   font-size: 0.9rem;
@@ -272,17 +273,47 @@ section:last-of-type { border-bottom: none; }
 }
 
 /* =========================================================
-   Responsive
+   Responsive — mobile-first breakpoints
    ========================================================= */
-@media (max-width: 640px) {
+
+/* ---------- Tablet and up (768px) ---------- */
+@media (min-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+
   .about-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 2.5rem;
   }
 
   .site-nav ul {
-    gap: 1.1rem;
-    flex-wrap: wrap;
+    gap: 1.75rem;
+    flex-wrap: nowrap;
   }
 
-  section { padding: 2.25rem 0; }
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .contact-form {
+    max-width: 32rem;
+  }
+}
+
+/* ---------- Desktop and up (1280px) ---------- */
+@media (min-width: 1280px) {
+  :root {
+    --max-width: 960px;
+  }
+
+  section {
+    padding: 3.5rem 0;
+  }
+
+  .site-header {
+    padding: 3rem 0 2.5rem;
+  }
 }
