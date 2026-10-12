@@ -88,10 +88,10 @@
       <h2 id="contact-heading">Contact me</h2>
       <p class="contact-intro">Have a question or want to work on something together? Send a message below.</p>
 
-      <form class="contact-form" action="#" method="post">
+      <form class="mt-6 flex flex-col gap-4 md:max-w-lg" action="#" method="post">
 
-        <div class="form-row">
-          <label for="name">Full name</label>
+        <div class="flex flex-col gap-1">
+          <label for="name" class="text-sm font-semibold">Full name</label>
           <input
             type="text"
             id="name"
@@ -99,11 +99,12 @@
             required
             minlength="2"
             autocomplete="name"
+            class="px-3 py-2.5 border border-gray-300 bg-gray-50 text-gray-900 focus:outline-2 focus:outline-green-700"
           >
         </div>
 
-        <div class="form-row">
-          <label for="email">Email address</label>
+        <div class="flex flex-col gap-1">
+          <label for="email" class="text-sm font-semibold">Email address</label>
           <input
             type="email"
             id="email"
@@ -111,11 +112,12 @@
             required
             autocomplete="email"
             placeholder="you@example.com"
+            class="px-3 py-2.5 border border-gray-300 bg-gray-50 text-gray-900 focus:outline-2 focus:outline-green-700"
           >
         </div>
 
-        <div class="form-row">
-          <label for="phone">Phone number</label>
+        <div class="flex flex-col gap-1">
+          <label for="phone" class="text-sm font-semibold">Phone number</label>
           <input
             type="tel"
             id="phone"
@@ -123,32 +125,35 @@
             pattern="[0-9+\-\s()]{7,15}"
             placeholder="e.g. +263 77 123 4567"
             autocomplete="tel"
+            class="px-3 py-2.5 border border-gray-300 bg-gray-50 text-gray-900 focus:outline-2 focus:outline-green-700"
           >
         </div>
 
-        <div class="form-row">
-          <label for="subject">Subject</label>
+        <div class="flex flex-col gap-1">
+          <label for="subject" class="text-sm font-semibold">Subject</label>
           <input
             type="text"
             id="subject"
             name="subject"
             required
             minlength="3"
+            class="px-3 py-2.5 border border-gray-300 bg-gray-50 text-gray-900 focus:outline-2 focus:outline-green-700"
           >
         </div>
 
-        <div class="form-row">
-          <label for="message">Message</label>
+        <div class="flex flex-col gap-1">
+          <label for="message" class="text-sm font-semibold">Message</label>
           <textarea
             id="message"
             name="message"
             rows="5"
             required
             minlength="10"
+            class="px-3 py-2.5 border border-gray-300 bg-gray-50 text-gray-900 focus:outline-2 focus:outline-green-700"
           ></textarea>
         </div>
 
-        <button type="submit">Send message</button>
+        <button type="submit" class="self-start bg-green-800 hover:bg-green-900 text-white font-semibold py-3 px-6 cursor-pointer transition-colors">Send message</button>
       </form>
     </section>
 
