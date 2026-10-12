@@ -7,18 +7,19 @@
   <meta name="description" content="Profile and mini-portfolio page for Theophany Bandure, a Software Engineering student at Africa University, built with semantic HTML5.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-name">
+  <header class="bg-gray-900 text-gray-50 py-8 md:py-10">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-6">
+      <div>
         <h1>Theophany Bandure</h1>
         <p class="tagline">Software Engineering Student</p>
       </div>
       <nav class="site-nav" aria-label="Page sections">
-        <ul>
+        <ul class="flex flex-wrap gap-3 md:gap-7">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
